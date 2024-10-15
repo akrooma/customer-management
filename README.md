@@ -38,7 +38,14 @@ As it has been a while since I did anything in Java then the folder structure pr
 	│	├── mapper			# Customer entity to DTO mapper tests.
 	│	├── service.customer		# Customer service methods' tests.
 	...
-			
+
+## Available services (endpoints)
+Possible REST operations and their details can be viewed via the Swagger UI.
+When running the application locally, navigate to the following URL:
+```
+http://localhost:8080/swagger-ui/index.html
+```
+
 ## Comments about some of the classes
 DTO-s as records instead of classes, self-implemented **CustomerMapper** instead of something pre-existing like **ModelMapper**.
 
@@ -53,6 +60,7 @@ Completely self-implemented **CustomerFactory** and **CustomerValidator** instea
 > The domain entity constructor is protected so that all new entities are created using the factory, which in turn ensures the validity of the entity by using the validator before constructing a new entity.
 > Entity methods for updating property values also use the same validator to validate new values.
 > This means the entity is always valid whenever we need to create it or update it in the service layer. Issues may rise, when the factory and update methods are not implemented correctly, but the developer cannot create any data anomalies when using property implemented entity manipulation methods in the service layer.
+>
 > This type of approach would definitely need a revision when entities become more complex (more properties, related entities) and / or the valid state depends on other data from the database.
 
 ## Alternative web app implementation
