@@ -16,16 +16,16 @@ As it has been a while since I did anything in Java then the folder structure pr
 	main
 	├── java
 	│   └── com.mysite.customers
-	│		├── config				# Configuration files for different components used by the web app (e.g. OpenAPI swagger config).
-	│		├── controller			# REST API controllers.
-	│		├── domain				# Domain (model?) entities, their factories, validators and listeners.
-	│		├── dto					# DTO-s.
-	│		├── exception			# Custom exceptions.
-	│		├── middleware			# Global handlers (e.g. ControllerAdvice exception handler)
-	│		├── repository			# Repository interfaces (and their implementations).
-	│		├── service				# Service interfactes and their implementations.
+	│	├── config			# Configuration files for different components used by the web app (e.g. OpenAPI swagger config).
+	│	├── controller			# REST API controllers.
+	│	├── domain			# Domain (model?) entities, their factories, validators and listeners.
+	│	├── dto				# DTO-s.
+	│	├── exception			# Custom exceptions.
+	│	├── middleware			# Global handlers (e.g. ControllerAdvice exception handler)
+	│	├── repository			# Repository interfaces (and their implementations).
+	│	├── service			# Service interfactes and their implementations.
 	├── resources 
-	│   └── db						# Contains database schema snapshot and changelog.
+	│   └── db				# Contains database schema snapshot and changelog.
     ...
 	
 ## Web app tests folder structure
@@ -33,10 +33,10 @@ As it has been a while since I did anything in Java then the folder structure pr
 	test
 	├── java
 	│   └── com.mysite.customers
-	│		├── controller.customer	# REST API controller endpoint tests.
-	│		├── domain				# Customer entity listener tests.
-	│		├── mapper				# Customer entity to DTO mapper tests.
-	│		├── service.customer	# Customer service methods' tests.
+	│	├── controller.customer		# REST API controller endpoint tests.
+	│	├── domain			# Customer entity listener tests.
+	│	├── mapper			# Customer entity to DTO mapper tests.
+	│	├── service.customer		# Customer service methods' tests.
 	...
 			
 ## Comments about some of the classes
@@ -58,4 +58,4 @@ Completely self-implemented **CustomerFactory** and **CustomerValidator** instea
 ## Alternative web app implementation
 Due to the simplicity of the domain of the web app, I could have:
 * used classes for DTO-s so I could use something like **ModelMapper** for entity <-> DTO converions;
-* **Spring Validator interface** or **@Validated** annotations for data integrity checks.
+* used **Spring Validator interface** or **@Validated** annotations for data integrity checks.
